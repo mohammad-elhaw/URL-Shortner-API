@@ -1,0 +1,23 @@
+<Solution>
+  <Folder Name="/Modules/" />
+  <Folder Name="/Modules/Analytics/">
+    <Project Path="Modules/Analytics/Analytics.API/Analytics.API.csproj" Id="6c56a6e1-8ae4-4c33-8109-8772df0c05c1" />
+    <Project Path="Modules/Analytics/Analytics.Application/Analytics.Application.csproj" Id="6c61d418-5cc5-4280-af63-2d00d6617fbf" />
+  </Folder>
+  <Folder Name="/Modules/Redirection/">
+    <Project Path="Modules/Redirection/Redirection.API/Redirection.API.csproj" Id="713bcd13-82a3-4304-aa07-add297ff6103" />
+    <Project Path="Modules/Redirection/Redirection.Application/Redirection.Application.csproj" Id="6f35fcde-746a-440c-85a4-822d0744c5d4" />
+  </Folder>
+  <Folder Name="/Modules/URLShortener/">
+    <Project Path="Modules/URL Shortener/URLShortener.API/URLShortener.API.csproj" Id="0a23ccfd-0d90-49e2-b7b1-106bac173dd5" />
+    <Project Path="Modules/URL Shortener/URLShortener.Application/URLShortener.Application.csproj" Id="476cabaf-6770-43a7-90e2-9838eb6a9524" />
+    <Project Path="Modules/URL Shortener/URLShortener.Domain/URLShortener.Domain.csproj" Id="8c7192df-69b7-4035-8dbf-63b117fb8c8e" />
+    <Project Path="Modules/URL Shortener/URLShortener.Infrastructure/URLShortener.Infrastructure.csproj" Id="3194ed6b-8feb-44c7-bfb8-15c16f8bd399" />
+  </Folder>
+  <Folder Name="/SharedKernel/">
+    <Project Path="SharedKernel/Shared.Application/Shared.Application.csproj" Id="8e325062-8718-4744-acfd-bd5656aa7690" />
+    <Project Path="SharedKernel/Shared.Domain/Shared.Domain.csproj" Id="63c8d9d6-8a9b-44cf-82c1-f47d42a1c449" />
+    <Project Path="SharedKernel/Shared.Infrastructure/Shared.Infrastructure.csproj" Id="7b100cf3-b7ca-4463-8297-521a260b147d" />
+  </Folder>
+  <Project Path="URLShortner Gateway/URLShortner Gateway.csproj" />
+</Solution>
