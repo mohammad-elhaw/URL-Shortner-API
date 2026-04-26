@@ -1,6 +1,6 @@
 ﻿namespace URLShortener.API;
 
-public class Class1
+public class AssemblyReference
 {
 
 }

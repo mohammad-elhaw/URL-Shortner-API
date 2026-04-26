@@ -1,4 +1,6 @@
-﻿namespace URLShortener.Domain;
+﻿using Shared.Domain;
+
+namespace URLShortener.Domain;
 
 public class ShortUrl : AggregateRoot
 {
@@ -20,8 +22,15 @@ public class ShortUrl : AggregateRoot
         if(string.IsNullOrWhiteSpace(originalUrl))
             return Result<ShortUrl>.Failure(
                 new Error(
-                    "ShortUrl.Invalid", 
+                    ErrorCodes.BadRequest, 
                     "Original URL cannot be empty.",
+                    default));
+
+        if(string.IsNullOrWhiteSpace(shortCode))
+            return Result<ShortUrl>.Failure(
+                new Error(
+                    ErrorCodes.BadRequest, 
+                    "Short code cannot be empty.",
                     default));
 
         return Result<ShortUrl>.Success(new(originalUrl, shortCode));
@@ -29,5 +38,4 @@ public class ShortUrl : AggregateRoot
 
     public void IncrementClickCount()
         => ClickCount++;
-    
 }
