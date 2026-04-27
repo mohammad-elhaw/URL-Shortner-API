@@ -1,4 +1,4 @@
-﻿namespace URLShortener.Domain;
+﻿namespace Shared.Domain;
 
 public class Result
 {
@@ -14,6 +14,11 @@ public class Result
 
     public static Result Success() => new (true, Error.None);
     public static Result Failure(Error error) => new (false, error);
+
+    public T Match<T>(Func<T> onSuccess, Func<Error, T> onFailure)
+    {
+        return IsSuccess ? onSuccess() : onFailure(Error!);
+    }
 }
 
 public class Result<T> : Result
@@ -25,4 +30,9 @@ public class Result<T> : Result
     }
     public static Result<T> Success(T value) => new (true, value, Error.None);
     public static new Result<T> Failure(Error error) => new (false, default!, error);
+
+    public TOut Match<TOut>(Func<T, TOut> onSuccess, Func<Error, TOut> onFailure)
+    {
+        return IsSuccess ? onSuccess(Value) : onFailure(Error!);
+    }
 }

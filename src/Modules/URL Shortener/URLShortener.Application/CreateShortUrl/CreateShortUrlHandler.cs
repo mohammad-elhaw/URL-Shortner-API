@@ -1,4 +1,5 @@
 ﻿using Shared.Application.CQRS;
+using Shared.Domain;
 using URLShortener.Domain;
 using URLShortener.Domain.Services;
 

@@ -1,4 +1,4 @@
-﻿namespace URLShortener.Domain;
+﻿namespace Shared.Domain;
 
 public record Error(string Code, string Message, object? Details)
 {

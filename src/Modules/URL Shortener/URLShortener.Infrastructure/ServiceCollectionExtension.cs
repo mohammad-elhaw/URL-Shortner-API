@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Shared.Application;
 using URLShortener.Domain;
 using URLShortener.Domain.Services;
 using URLShortener.Infrastructure.Database;
@@ -26,6 +27,8 @@ public static class ServiceCollectionExtension
         });
 
         services.AddScoped<IShortUrlRepository, ShortUrlRepository>();
+        services.AddScoped<IUrlResolver, UrlResolver>();
+        
         return services;
     }
 }

@@ -1,15 +1,15 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Shared.Domain;
 
-namespace URLShortener.API;
+namespace Redirection.API;
 
 [ApiController]
-[Route("api/shorturl")]
+[Route("api/redirect")]
 public abstract class BaseController : ControllerBase
 {
     protected ActionResult HandleResult(Result result, int statusCode)
     {
-        if(result.IsSuccess) return StatusCode(statusCode);
+        if (result.IsSuccess) return StatusCode(statusCode);
 
         return result.Error?.Code switch
         {

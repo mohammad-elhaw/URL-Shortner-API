@@ -11,6 +11,7 @@ public static class InitializeApplicationServiceExtensions
     {
         services.AddControllers()
             .AddApplicationPart(typeof(URLShortener.API.AssemblyReference).Assembly)
+            .AddApplicationPart(typeof(Redirection.API.AssemblyReference).Assembly)
             .ConfigureApiBehaviorOptions(opts =>
             {
                 opts.SuppressModelStateInvalidFilter = true;
@@ -19,7 +20,9 @@ public static class InitializeApplicationServiceExtensions
         services.AddUrlShortnerAPI(config);
         services.AddURLShortenerInfrastructure(config);
 
-        services.AddSharedInfrastructure(typeof(URLShortener.Application.ServiceCollectionExtension).Assembly);
+        services.AddSharedInfrastructure(
+            typeof(URLShortener.Application.ServiceCollectionExtension).Assembly,
+            typeof(Redirection.Application.AssemblyReference).Assembly);
 
         return services;
     }

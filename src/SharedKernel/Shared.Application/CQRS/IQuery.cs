@@ -1,5 +1,5 @@
 ﻿using MediatR;
-using URLShortener.Domain;
+using Shared.Domain;
 
 namespace Shared.Application.CQRS;
 
