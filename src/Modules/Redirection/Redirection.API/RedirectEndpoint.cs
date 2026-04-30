@@ -8,10 +8,10 @@ namespace Redirection.API;
 public class RedirectEndpoint(IMediator mediator)
     : BaseController
 {
-    [HttpGet]
-    public async Task<ActionResult<Application.RedirectResult>> RedirectCode([FromBody] RedirectCommand code)
+    [HttpGet("{code}")]
+    public async Task<ActionResult<Application.RedirectResult>> RedirectCode([FromRoute] string code)
     {
-        var result = await mediator.Send(code);
-        return HandleResult(result, StatusCodes.Status308PermanentRedirect);
+        var result = await mediator.Send(new RedirectCommand(code));
+        return HandleResult(result, StatusCodes.Status301MovedPermanently);
     }
 }
