@@ -7,7 +7,8 @@ using Shared.Messaging.Events;
 namespace Redirection.Application;
 
 public class RedirectHandler(IUrlResolver urlResolver,
-    IMessageBus messageBus)
+    IMessageBus messageBus,
+    IRequestContext context)
     : ICommandHandler<RedirectCommand, RedirectResult>
 {
     public async Task<Result<RedirectResult>> Handle(RedirectCommand command, CancellationToken cancellationToken)
@@ -21,8 +22,8 @@ public class RedirectHandler(IUrlResolver urlResolver,
                 (
                     command.ShortUrl,
                     result.Value,
-                    command.IpAddress,
-                    command.UserAgent
+                    context.IpAddress,
+                    context.UserAgent
                 ), cancellationToken);
         }
 

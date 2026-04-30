@@ -1,5 +1,6 @@
 ﻿using Analytics.Infrastructure;
 using Redirection.Infrastructure;
+using Shared.Application;
 using Shared.Infrastructure;
 using URLShortener.API;
 using URLShortener.Infrastructure;
@@ -29,6 +30,9 @@ public static class InitializeApplicationServiceExtensions
         services.AddSharedInfrastructure(
             typeof(URLShortener.Application.ServiceCollectionExtension).Assembly,
             typeof(Redirection.Application.AssemblyReference).Assembly);
+
+        services.AddHttpContextAccessor();
+        services.AddScoped<IRequestContext, HttpRequestContext>();
 
         return services;
     }

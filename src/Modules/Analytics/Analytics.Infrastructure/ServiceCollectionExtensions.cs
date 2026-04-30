@@ -1,4 +1,5 @@
-﻿using Analytics.Domain;
+﻿using Analytics.Application;
+using Analytics.Domain;
 using Analytics.Infrastructure.Database;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
@@ -17,6 +18,7 @@ public static class ServiceCollectionExtensions
             opts.UseSqlServer(config.GetConnectionString("Database"));
         });
 
+        services.AddScoped<UrlResolvedIntegrationEventHandler>();
         services.AddScoped<IVisitRepository, VisitRepository>();
         services.AddCapConsumer(config);
         return services;

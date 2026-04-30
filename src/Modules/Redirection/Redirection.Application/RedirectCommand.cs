@@ -2,7 +2,4 @@
 
 namespace Redirection.Application;
 
-public record RedirectCommand(
-    string ShortUrl,
-    string? IpAddress,
-    string? UserAgent) : ICommand<RedirectResult>;
+public record RedirectCommand(string ShortUrl) : ICommand<RedirectResult>;

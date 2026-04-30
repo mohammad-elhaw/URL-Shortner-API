@@ -25,6 +25,7 @@
     <ProjectReference Include="..\Modules\Redirection\Redirection.Infrastructure\Redirection.Infrastructure.csproj" />
     <ProjectReference Include="..\Modules\URL Shortener\URLShortener.API\URLShortener.API.csproj" />
     <ProjectReference Include="..\Modules\URL Shortener\URLShortener.Infrastructure\URLShortener.Infrastructure.csproj" />
+    <ProjectReference Include="..\SharedKernel\Shared.Application\Shared.Application.csproj" />
   </ItemGroup>
 
 </Project>
