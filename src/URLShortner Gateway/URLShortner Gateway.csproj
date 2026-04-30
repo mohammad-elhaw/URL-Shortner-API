@@ -1,10 +1,13 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>net10.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <RootNamespace>URLShortner_Gateway</RootNamespace>
+    <UserSecretsId>19e9f8fd-b446-4b6b-b32a-3e8a1361f7e1</UserSecretsId>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+    <DockerComposeProjectPath>..\docker-compose.dcproj</DockerComposeProjectPath>
   </PropertyGroup>
 
   <ItemGroup>
@@ -12,10 +15,14 @@
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.23.0" />
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Modules\Analytics\Analytics.API\Analytics.API.csproj" />
+    <ProjectReference Include="..\Modules\Analytics\Analytics.Infrastructure\Analytics.Infrastructure.csproj" />
     <ProjectReference Include="..\Modules\Redirection\Redirection.API\Redirection.API.csproj" />
+    <ProjectReference Include="..\Modules\Redirection\Redirection.Infrastructure\Redirection.Infrastructure.csproj" />
     <ProjectReference Include="..\Modules\URL Shortener\URLShortener.API\URLShortener.API.csproj" />
     <ProjectReference Include="..\Modules\URL Shortener\URLShortener.Infrastructure\URLShortener.Infrastructure.csproj" />
   </ItemGroup>

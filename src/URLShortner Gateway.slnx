@@ -3,10 +3,13 @@
   <Folder Name="/Modules/Analytics/">
     <Project Path="Modules/Analytics/Analytics.API/Analytics.API.csproj" Id="6c56a6e1-8ae4-4c33-8109-8772df0c05c1" />
     <Project Path="Modules/Analytics/Analytics.Application/Analytics.Application.csproj" Id="6c61d418-5cc5-4280-af63-2d00d6617fbf" />
+    <Project Path="Modules/Analytics/Analytics.Domain/Analytics.Domain.csproj" Id="e0af21a7-63b2-4d3c-a3c9-06ec2af99c9d" />
+    <Project Path="Modules/Analytics/Analytics.Infrastructure/Analytics.Infrastructure.csproj" Id="9ca19d38-fc17-4ca2-bce7-3995436c39d7" />
   </Folder>
   <Folder Name="/Modules/Redirection/">
     <Project Path="Modules/Redirection/Redirection.API/Redirection.API.csproj" Id="713bcd13-82a3-4304-aa07-add297ff6103" />
     <Project Path="Modules/Redirection/Redirection.Application/Redirection.Application.csproj" Id="6f35fcde-746a-440c-85a4-822d0744c5d4" />
+    <Project Path="Modules/Redirection/Redirection.Infrastructure/Redirection.Infrastructure.csproj" Id="3a34a7e3-92c6-4e36-a3d9-ae82ee671f0c" />
   </Folder>
   <Folder Name="/Modules/URLShortener/">
     <Project Path="Modules/URL Shortener/URLShortener.API/URLShortener.API.csproj" Id="0a23ccfd-0d90-49e2-b7b1-106bac173dd5" />
@@ -18,6 +21,10 @@
     <Project Path="SharedKernel/Shared.Application/Shared.Application.csproj" Id="8e325062-8718-4744-acfd-bd5656aa7690" />
     <Project Path="SharedKernel/Shared.Domain/Shared.Domain.csproj" Id="63c8d9d6-8a9b-44cf-82c1-f47d42a1c449" />
     <Project Path="SharedKernel/Shared.Infrastructure/Shared.Infrastructure.csproj" Id="7b100cf3-b7ca-4463-8297-521a260b147d" />
+    <Project Path="SharedKernel/Shared.Messaging/Shared.Messaging.csproj" Id="0b7f814a-f23f-4046-928d-b130b6629f0d" />
   </Folder>
+  <Project Path="docker-compose.dcproj">
+    <Build />
+  </Project>
   <Project Path="URLShortner Gateway/URLShortner Gateway.csproj" />
 </Solution>

@@ -5,7 +5,6 @@ using URLShortener.Application.CreateShortUrl;
 
 namespace URLShortener.API.CreateShortUrl;
 
-
 public class CreateEndpoint(IMediator mediator)
     : BaseController
 {

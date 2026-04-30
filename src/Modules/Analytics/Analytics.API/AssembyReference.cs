@@ -1,6 +1,6 @@
 ﻿namespace Analytics.API;
 
-public class Class1
+public class AssembyReference
 {
 
 }

@@ -8,6 +8,8 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\..\SharedKernel\Shared.Application\Shared.Application.csproj" />
+    <ProjectReference Include="..\..\..\SharedKernel\Shared.Messaging\Shared.Messaging.csproj" />
+    <ProjectReference Include="..\Analytics.Domain\Analytics.Domain.csproj" />
   </ItemGroup>
 
 </Project>

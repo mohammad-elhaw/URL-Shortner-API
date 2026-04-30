@@ -7,8 +7,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\..\SharedKernel\Shared.Application\Shared.Application.csproj" />
-    <ProjectReference Include="..\..\..\SharedKernel\Shared.Messaging\Shared.Messaging.csproj" />
+    <ProjectReference Include="..\..\..\SharedKernel\Shared.Infrastructure\Shared.Infrastructure.csproj" />
+    <ProjectReference Include="..\Redirection.Application\Redirection.Application.csproj" />
   </ItemGroup>
 
 </Project>
